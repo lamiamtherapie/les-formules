@@ -303,16 +303,33 @@
   font-family:'Fraunces',serif;font-weight:500;font-size:26px;
   text-align:center;margin-bottom:32px;
 }
-.aici-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:24px;max-width:900px;margin:0 auto;
+.faq{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq details{
+  background:#fff;border:1px solid var(--hairline);border-radius:14px;
+  padding:0 20px;transition:border-color .2s;
 }
-.aici-grid h4{font-size:16px;font-weight:600;margin-bottom:6px}
-.aici-grid p{font-size:15px;color:var(--gris);line-height:1.55}
+.faq details[open]{border-color:var(--vert)}
+.faq summary{
+  list-style:none;cursor:pointer;font-weight:600;font-size:16px;
+  padding:18px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"+";font-size:22px;font-weight:400;color:var(--vert-fonce);
+  line-height:1;transition:transform .2s;
+}
+.faq details[open] summary::after{content:"−"}
+.faq details p{
+  padding:0 0 18px;margin:0;font-size:15px;color:var(--gris);line-height:1.6;
+  }
 .aici-lien{
   text-align:center;font-size:14px;color:var(--gris);margin-top:32px;
 }
-.aici-lien a{color:var(--vert-fonce)}
+.aici-lien a{
+  color:var(--vert-fonce)}
+
+  .credit-explainer.apres-cartes{
+    margin-top:40px;margin-bottom:0}
 </style>
 </head>
 <body>
@@ -462,12 +479,6 @@
     <h2>Les formules</h2>
     <p class="sous">Le prix affiché, c'est ce que vous payez réellement. Courses non incluses.</p>
 
-    <div class="credit-explainer">
-      Ce service ouvre droit à <strong>50% de crédit d'impôt</strong>. Grâce à l'avance immédiate — dispositif mis en place par l'Urssaf et la Direction générale des Finances publiques (DGFiP) — cette réduction s'applique directement sur votre facture, sans avance de trésorerie ni attente de votre déclaration d'impôts.
-      <div class="ex">Exemple pour la formule Solo (120&nbsp;€ plein tarif) : avec le crédit d'impôt, votre reste à charge standard est de 60&nbsp;€. Pendant le lancement, -30% supplémentaires s'appliquent sur ce reste à charge : vous ne payez que 42&nbsp;€, immédiatement.</div>
-      <a class="credit-lien" href="#avance-immediate">Comment ça marche concrètement →</a>
-    </div>
-
     <div class="cards">
       <div class="card">
         <div class="card-main">
@@ -540,6 +551,11 @@
       </div>
 
     </div>
+    <div class="credit-explainer apres-cartes">
+      Ce service ouvre droit à <strong>50% de crédit d'impôt</strong>. Grâce à l'avance immédiate — dispositif mis en place par l'Urssaf et la Direction générale des Finances publiques (DGFiP) — cette réduction s'applique directement sur votre facture, sans avance de trésorerie ni attente de votre déclaration d'impôts.
+      <div class="ex">Exemple pour la formule Solo (120&nbsp;€ plein tarif) : avec le crédit d'impôt, votre reste à charge standard est de 60&nbsp;€. Pendant le lancement, -30% supplémentaires s'appliquent sur ce reste à charge : vous ne payez que 42&nbsp;€, immédiatement.</div>
+      <a class="credit-lien" href="#avance-immediate">Comment ça marche concrètement →</a>
+    </div>
   </div>
 </section>
 
@@ -593,23 +609,23 @@
 <section class="aici-details" id="avance-immediate">
   <div class="wrap">
     <h3>L'avance immédiate, en pratique</h3>
-    <div class="aici-grid">
-      <div>
-        <h4>C'est facultatif</h4>
+    <div class="faq">
+      <details>
+        <summary>C'est facultatif</summary>
         <p>Vous pouvez toujours régler normalement si vous préférez. Rien ne vous y oblige.</p>
-      </div>
-      <div>
-        <h4>Comment l'activer</h4>
+      </details>
+      <details>
+        <summary>Comment l'activer</summary>
         <p>Vous créez votre compte sur <strong>particulier.urssaf.fr</strong>. C'est gratuit et ça ne prend que quelques minutes.</p>
-      </div>
-      <div>
-        <h4>Ensuite, à chaque prestation</h4>
+      </details>
+      <details>
+        <summary>Ensuite, à chaque prestation</summary>
         <p>Vous recevez ma demande de paiement sur votre compte Urssaf. Vous avez 48h pour la valider ou la contester.</p>
-      </div>
-      <div>
-        <h4>Une question ?</h4>
+      </details>
+      <details>
+        <summary>Une question ?</summary>
         <p>Votre interlocutrice, c'est moi — jamais l'Urssaf directement. Vous m'appelez, on règle ça ensemble.</p>
-      </div>
+      </details>
     </div>
     <p class="aici-lien">Plafonds et conditions détaillées : <a href="https://www.impots.gouv.fr/portail/particulier/emploi-domicile" target="_blank" rel="noopener noreferrer">impots.gouv.fr — emploi à domicile</a></p>
   </div>
