@@ -289,7 +289,30 @@
     .prix{font-size:38px}
     .card{grid-template-columns:1fr;gap:24px;padding:32px 26px}
     .badge{left:26px}
+    
   }
+
+  .credit-lien{
+  display:inline-block;margin-top:14px;font-size:15px;font-weight:600;
+  color:var(--vert-fonce);text-decoration:none;border-bottom:1.5px solid var(--vert);
+  padding-bottom:2px;
+}
+.credit-lien:hover{color:var(--noir)}
+.aici-details{padding:56px 0;background:var(--creme);border-top:1px solid var(--hairline)}
+.aici-details h3{
+  font-family:'Fraunces',serif;font-weight:500;font-size:26px;
+  text-align:center;margin-bottom:32px;
+}
+.aici-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:24px;max-width:900px;margin:0 auto;
+}
+.aici-grid h4{font-size:16px;font-weight:600;margin-bottom:6px}
+.aici-grid p{font-size:15px;color:var(--gris);line-height:1.55}
+.aici-lien{
+  text-align:center;font-size:14px;color:var(--gris);margin-top:32px;
+}
+.aici-lien a{color:var(--vert-fonce)}
 </style>
 </head>
 <body>
@@ -442,13 +465,10 @@
     <div class="credit-explainer">
       Ce service ouvre droit à <strong>50% de crédit d'impôt</strong>. Grâce à l'avance immédiate — dispositif mis en place par l'Urssaf et la Direction générale des Finances publiques (DGFiP) — cette réduction s'applique directement sur votre facture, sans avance de trésorerie ni attente de votre déclaration d'impôts.
       <div class="ex">Exemple pour la formule Solo (120&nbsp;€ plein tarif) : avec le crédit d'impôt, votre reste à charge standard est de 60&nbsp;€. Pendant le lancement, -30% supplémentaires s'appliquent sur ce reste à charge : vous ne payez que 42&nbsp;€, immédiatement.</div>
-        <p>C'est un service <strong>entièrement facultatif</strong> — vous pouvez toujours régler normalement si vous préférez. Pour en bénéficier : vous activez votre compte sur <strong>particulier.urssaf.fr</strong>, puis vous recevez les demandes de paiement de La Miam Thérapie directement dessus, avec 48h pour les valider ou les contester. En cas de question, votre interlocuteur reste toujours La Miam Thérapie, jamais l'Urssaf directement.</p>
-        <p>Plafonds et conditions détaillées : <a href="https://www.impots.gouv.fr/portail/particulier/emploi-domicile" target="_blank" rel="noopener noreferrer">impots.gouv.fr — emploi à domicile</a></p>
-      </div>
+      <a class="credit-lien" href="#avance-immediate">Comment ça marche concrètement →</a>
     </div>
 
     <div class="cards">
-
       <div class="card">
         <div class="card-main">
           <h3>Solo</h3>
@@ -570,7 +590,31 @@
   <a class="btn-final" href="https://cal.com/melissa-lmt/15min?overlayCalendar=true" target="_blank" rel="noopener noreferrer">Réserver un appel</a>  
   <div class="tel">Appel sans engagement</div>
 </section>
-
+<section class="aici-details" id="avance-immediate">
+  <div class="wrap">
+    <h3>L'avance immédiate, en pratique</h3>
+    <div class="aici-grid">
+      <div>
+        <h4>C'est facultatif</h4>
+        <p>Vous pouvez toujours régler normalement si vous préférez. Rien ne vous y oblige.</p>
+      </div>
+      <div>
+        <h4>Comment l'activer</h4>
+        <p>Vous créez votre compte sur <strong>particulier.urssaf.fr</strong>. C'est gratuit et ça ne prend que quelques minutes.</p>
+      </div>
+      <div>
+        <h4>Ensuite, à chaque prestation</h4>
+        <p>Vous recevez ma demande de paiement sur votre compte Urssaf. Vous avez 48h pour la valider ou la contester.</p>
+      </div>
+      <div>
+        <h4>Une question ?</h4>
+        <p>Votre interlocutrice, c'est moi — jamais l'Urssaf directement. Vous m'appelez, on règle ça ensemble.</p>
+      </div>
+    </div>
+    <p class="aici-lien">Plafonds et conditions détaillées : <a href="https://www.impots.gouv.fr/portail/particulier/emploi-domicile" target="_blank" rel="noopener noreferrer">impots.gouv.fr — emploi à domicile</a></p>
+  </div>
+</section>
+  
 <footer>
   <div class="wrap footer-inner">
     <div class="footer-text">La Miam Thérapie · Batch cooking à domicile · Service non médical, juste du fait maison qui fait du bien</div>
